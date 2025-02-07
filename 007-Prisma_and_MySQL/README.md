@@ -1,4 +1,5 @@
 ## Introduction
+
 Today project is a basic NodeJs API app with MySQL database. This project use Typescript programming languague and ExpressJS web application framework.
 
 <p align="center">
@@ -7,47 +8,56 @@ Today project is a basic NodeJs API app with MySQL database. This project use Ty
   </a>
 </p>
 
-
 ## Features
+
 - Basic NodeJS API app + SQL database
 - MySQL database
 - Prisma
 
-
 ## Usage
+
 1.  Change dir to the project directory:
+
     ```bash
     cd ./007-Prisma_and_MySQL
     ```
 
 2.  Install node_modules packages:
+
     ```bash
     npm install
     ```
 
-3. Copy `.env.example` to `.env`:
+3.  Copy `.env.example` to `.env`:
+
     ```bash
     cp ./.env.example ./.env
     ```
 
 4.  Modify your database information in `.env`:
+
     ```properties
     DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```
 
-5.  **Optional:
+5.  \*\*Optional:
+
     - If you have database already and want to pull tables' structure:
+
     ```bash
-    npx prisma db pull --force --schema ./src/prisma/schema.prisma 
+    npx prisma db pull --force --schema ./src/prisma/schema.prisma
     ```
+
     - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/) to create, push, migrate tables,... to database.
 
 6.  Generate Prisma Client:
+
     ```bash
-    npx prisma generate --schema ./src/prisma/schema.prisma 
+    npx prisma generate --schema ./src/prisma/schema.prisma
     ```
 
 7.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
+
     ```bash
     # Dev environment
     npm run dev
@@ -55,8 +65,9 @@ Today project is a basic NodeJs API app with MySQL database. This project use Ty
     # Prod environment
     npm run prod
     ```
-    
+
 8.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+
     ```bash
     # Health check
     curl ${host}:3000/api/up
@@ -71,8 +82,8 @@ Today project is a basic NodeJs API app with MySQL database. This project use Ty
     curl ${host}:3000/api/user/email/${email}
     ```
 
-
 ## Available routes
+
 <div align="center">
   <table>
     <thead>
@@ -97,7 +108,8 @@ Today project is a basic NodeJs API app with MySQL database. This project use Ty
         <td>3</td>
         <td>/api/user/all</td>
         <td>get users list</td>
-      </tr>      <tr>
+      </tr>      
+      <tr>
         <td>4</td>
         <td>/api/user/username/${username}</td>
         <td>find user by username</td>
@@ -111,6 +123,6 @@ Today project is a basic NodeJs API app with MySQL database. This project use Ty
   </table>
 </div>
 
-
 ## Contributing
+
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!

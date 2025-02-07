@@ -1,4 +1,5 @@
 ## Introduction
+
 Today project is a basic NodeJs API app with MongoDB. This project use Typescript programming languague and ExpressJS web application framework.
 
 <p align="center">
@@ -7,29 +8,33 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
   </a>
 </p>
 
-
 ## Features
+
 - Basic NodeJS API app + NoSQL database
 - MongoDB
 
-
 ## Usage
+
 1.  Change dir to the project directory:
+
     ```bash
     cd ./002-MongoDB
     ```
 
 2.  Install node_modules packages:
+
     ```bash
     npm install
     ```
 
-3. Copy `.env.example` to `.env`:
+3.  Copy `.env.example` to `.env`:
+
     ```bash
     cp ./.env.example ./.env
     ```
 
 4.  Modify your database information in `.env`:
+
     ```properties
     DB_USERNAME=root
     DB_PASSWORD=secret
@@ -39,6 +44,7 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     ```
 
 5.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
+
     ```bash
     # Dev environment
     npm run dev
@@ -46,8 +52,9 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     # Prod environment
     npm run prod
     ```
-    
+
 6.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+
     ```bash
     # Health check
     curl ${host}:3000/api/up
@@ -62,8 +69,8 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     curl ${host}:3000/api/user/email/${email}
     ```
 
-
 ## Available routes
+
 <div align="center">
   <table>
     <thead>
@@ -88,7 +95,8 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
         <td>3</td>
         <td>/api/user/all</td>
         <td>get users list</td>
-      </tr>      <tr>
+      </tr>      
+      <tr>
         <td>4</td>
         <td>/api/user/username/${username}</td>
         <td>find user by username</td>
@@ -102,6 +110,6 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
   </table>
 </div>
 
-
 ## Contributing
+
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!
